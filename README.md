@@ -16,13 +16,13 @@ This project implements and demonstrated simple generic search engine based on *
 
 ## Example
 In the following example some data was taken from [pubmedlib.](https://pubmed.ncbi.nlm.nih.gov/), the Query "gen" has been inserted into first box :
-![alt text](READMEimgs\image.png)
+![alt text](READMEimgs/image.png)
 
 If the wrong file is tried to be opened via interacting with the second search box, following appears in the textbox: 
-![alt text](READMEimgs\image-1.png)
+![alt text](READMEimgs/image-1.png)
 
 If the right name of the file is searched in the second search box, following could be an answer :
-![alt text](READMEimgs\image-2.png)
+![alt text](READMEimgs/image-2.png)
 
 The box could also be changed for better readability :
-![alt text](READMEimgs\image-3.png)
+![alt text](READMEimgs/image-3.png)
