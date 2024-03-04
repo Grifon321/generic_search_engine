@@ -1,0 +1,7 @@
+1: Patel S, Gupta RS. A phylogenomic and comparative genomic framework for
+resolving the polyphyly of the genus <i>Bacillus</i>: Proposal for six new
+genera of <i>Bacillus</i> species, <i>Peribacillus</i> gen. nov.,
+<i>Cytobacillus</i> gen. nov., <i>Mesobacillus</i> gen. nov., <i>Neobacillus</i>
+gen. nov., <i>Metabacillus</i> gen. nov. and <i>Alkalihalobacillus</i> gen. nov.
+Int J Syst Evol Microbiol. 2020 Jan;70(1):406-438. doi: 10.1099/ijsem.0.003775.
+PMID: 31617837.

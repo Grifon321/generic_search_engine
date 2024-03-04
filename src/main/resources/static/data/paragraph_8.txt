@@ -1,0 +1,6 @@
+8: Zhang Y, Zou D, Zhu T, Xu T, Chen M, Niu G, Zong W, Pan R, Jing W, Sang J,
+Liu C, Xiong Y, Sun Y, Zhai S, Chen H, Zhao W, Xiao J, Bao Y, Hao L, Zhang Z.
+Gene Expression Nebulas (GEN): a comprehensive data portal integrating
+transcriptomic profiles across multiple species at both bulk and single-cell
+levels. Nucleic Acids Res. 2022 Jan 7;50(D1):D1016-D1024. doi:
+10.1093/nar/gkab878. PMID: 34591957; PMCID: PMC8728231.

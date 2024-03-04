@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Bar</title>
+<style>
+  .search-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  input[type=text]:focus {
+    border: 2px solid #555;
+  }
+  input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=button]:hover {
+    background-color: #45a049;
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 24px;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  }
+  #text-block
+  {
+    /*display: none; /* Initially hide the text box */
+    /*resize: none;*/
+    width: 55%; /* Set width to 80% of the screen */
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search...">
+  <input type="button" value="Search" onclick="saveInput()">
+</div>
+<div class="search-container">
+  <input type="text" id="fileInput" placeholder="Input file name...">
+  <input type="button" value="Open" onclick="openFile()">
+</div>
+
+<div class="search-container">
+  <textarea id="text-block"readonly></textarea>
+</div>
+
+<h3>
+  <hr>
+    <table class="center" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Ranking</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="tempResults:${NameScore}">
+          <td th:text="${tempResults.name}"></td>
+          <td th:text="${tempResults.ranking}"></td>
+        </tr>
+      </tbody>
+</h3>
+
+<script>
+       
+  function openFile(){
+    var userInput = document.getElementById("fileInput").value;
+    fetch('/open', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ userInput: userInput })
+    })
+    .then(response => response.text())  // Converts response to text
+    .then(promiseResult => {
+        // Use the resolved text content (promiseResult)
+        document.getElementById('text-block').innerText = promiseResult;  // Updates HTML content with response text
+    })
+    .catch(error => {
+      console.error('There was a problem saving the input:', error);
+    });
+  }
+
+  function saveInput() {
+    var userInput = document.getElementById("searchInput").value;
+    // Send the input to the backend via AJAX
+    fetch('/save', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ userInput: userInput })
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      console.log('Input saved successfully');
+    }).then(data => {
+      console.log(data); // Log the response from the backend (if needed)
+      location.reload(); // Reload the page only after successful save
+    })
+    .catch(error => {
+      console.error('There was a problem saving the input:', error);
+    });
+  }
+</script>
+</body>
+</html>

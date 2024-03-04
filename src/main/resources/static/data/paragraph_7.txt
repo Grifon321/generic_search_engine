@@ -1,0 +1,8 @@
+7: Gupta RS, Patel S, Saini N, Chen S. Robust demarcation of 17 distinct
+<i>Bacillus</i> species clades, proposed as novel <i>Bacillaceae</i> genera, by
+phylogenomics and comparative genomic analyses: description of <i>Robertmurraya
+kyonggiensis</i> sp. nov. and proposal for an emended genus <i>Bacillus</i>
+limiting it only to the members of the Subtilis and Cereus clades of species.
+Int J Syst Evol Microbiol. 2020 Nov;70(11):5753-5798. doi:
+10.1099/ijsem.0.004475. Epub 2020 Oct 27. Erratum in: Int J Syst Evol Microbiol.
+2020 Dec;70(12):6531-6533. PMID: 33112222.
